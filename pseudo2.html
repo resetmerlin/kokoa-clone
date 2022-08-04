@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<!-- mandatory when you write document or html -->
+<!-- we are trying to telling browser or explain what we are writing -->
+<html lang="kr">
+    <head>
+        <title>My first webstie</title>
+
+        <style>
+  
+            body{
+                height: 1000vh;
+                margin: 50px;
+            }
+            span{
+                background-color: yellowgreen;
+                padding: 5px;
+                border-radius: 10px;
+            }
+            p span{
+                color:wheat
+            }
+
+            p + span{
+            text-decoration: underline;
+
+            }
+
+            input{
+                border: 1px solid wheat;
+            }
+
+ 
+            input:required{
+                border-color: tomato;                
+
+
+            }
+            input[placeholder~="name"]{
+                background-color: pink;
+            }
+
+              
+        </style>
+    </head>
+
+    <body>
+        <div>
+
+            <form>
+                <input type="text" placeholder="First name"/>
+                <input type="text" placeholder="Last name"/>
+
+                <input type="password" required placeholder="password"/>
+
+                
+
+
+                
+            </form>
+            <p>
+                Combinators<span>hii</span>
+    
+            </p>
+            <span>hello</span>
+ 
+
+
+        </div>
+        <p>만약 sapn이 p의 형제인데 바로 뒤에 오지 않을 때 쓸 수 있는 게 바로 <strong>"~"</strong></p>
+        
+        <p>p + span: p 바로 다음에 span이 올 때만 적용
+            p ~ span: span이 p의 형제인데 바로 뒤에 오지 않을 때 사용
+            </p>
+
+        <xmp>
+            input[placeholder~="name"]{
+                background-color: pink;
+            }
+
+            <input type="text" placeholder="First name"/>
+            <input type="text" placeholder="Last name"/>
+
+            <input type="password" required placeholder="password"/>
+
+        </xmp>
+
+        <p>input ~= 의 의미는 한가지인 단어를 입력해서 스타일을 바꿀 수 있다.</p>
+
+        
+
+
+        <p>- combinators
+            p + span: p 바로 다음에 span이 올 때만 적용
+            p ~ span: span이 p의 형제인데 바로 뒤에 오지 않을 때 사용
+            
+            - pseudo selectors
+            username과 password를 적는 form 두개 만들고 패스워드는 required 일 때, required에만 border을 주고 싶은 경우. input:required {1px solid tomato;} 이렇게 적음.
+            
+            input:optional {1px solid blue;} 는 필수 입력 대상이 아닌 input에 적용하라는 의미.
+            
+            - attribute selectors
+            attribute를 통해 어떤 것이든 선택할 수 있게 해줌
+            
+            type이 password인 input의 배경색을 변경하고 싶으면, input[type="password] {b-c: red;} 이렇게 작성.
+            placeholder 속성으로도 작성 가능함.
+            
+            input을 first name, last name 두개 만들고, placeholder에 name이라는 단어를 포함한 모든 input의 배경색을 설정하고 싶을 때, input[placeholder~="name"] {b-c: pink;} 라고 작성(name 앞뒤에 공백이 있는 상태).
+            
+            placeholder*="name" 은 공백이 없는 name도 적용됨.
+            
+            a[href$=".org"] {font-style: italic;} 은 끝이 .org로 끝나는 모든 href에 적용.
+            
+            엄청 많은 attribute selectors 종류.
+            
+            html에 따로 class 추가할 필요 없이 css로 다 설정 가능.</p>
+
+
+
+    </body>
+</html>
+

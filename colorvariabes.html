@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <title>My first webstie</title>
+
+        <style>
+            :root{
+                --main-color:rgba(252,206,0,0.8);
+                --default-border:1px solid var(--main-color);
+
+            }
+  
+            body{
+                height: 1000vh;
+                margin: 50px;
+            }
+
+            p{
+                background-color: var(--main-color);
+            }
+            a{
+                color: var(--main-color);
+                border:var(--default-border);
+            }
+
+
+
+        </style>
+    </head>
+
+    <body>
+        <p> hi</p>
+        <div>
+            <a href="#">website</a>
+        </div>
+
+        <main>
+            컬러는 css에서 매우 중요.
+css에서 알아야 할 컬러시스템에는 3가지가 있음.
+
+1. hexadecimal color(16진수 컬러)
+: #000000
+
+2. rgb 방식
+: (0, 0, 0)
+
+3.. rgba 방식
+: a는 알파, 투명도를 나타냄 (0, 0, 0, 0)
+
+똑같은 색상 여러 코드에 사용하려면 복붙해도 되지만 수정할 일 생기면 귀찮음.
+이때 :root라는 변수 사용 가능. :root는 모든 문서의 출발점.
+
+:root {--main-color: #f000;} 라고 문서 처음에 설정해놓고, 이 색상을 사용하는 코드마다
+color: var(--main-color); 라고 써주면 다 똑같이 적용됨. 나중에 색상 수정하고 싶으면 한 번만 하면 됨. 이렇게 컬러를 변수에 저장하는 방법 (원래는 custom property 라고 함).
+
+변수 이름 적을 때는 dash 2개, 변수 이름, 변수 이름 사이에는 dash
+
+컬러만 가능한게 아니라 --default-border: 1px solid var(--main-color) 이렇게도 지정 가능.
+
+*color picker라는 크롬 프로그램 사용
+        </main>
+
+
+    </body>
+
+
+
+   
+</html>
+

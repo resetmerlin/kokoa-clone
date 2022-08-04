@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<!-- mandatory when you write document or html -->
+<!-- we are trying to telling browser or explain what we are writing -->
+<html lang="kr">
+    <head>
+        <title>My first webstie</title>
+
+        <style>
+  
+            body{
+                height: 1000vh;
+                margin: 50px;
+            }
+
+
+
+
+         
+     
+
+
+            span{
+                background-color: yellowgreen;
+                padding: 5px;
+                border-radius: 10px;
+            }
+            p span{
+                color:wheat
+            }
+
+            div >span{
+                text-decoration: underline;
+            }
+
+
+
+
+                
+        </style>
+    </head>
+
+    <body>
+
+
+       <span>hello</span>
+       <span>hello</span>
+
+       <span>hello</span>
+       <span>hello</span>
+       <span>hello</span>
+       <span>hello</span>
+       <span>hello</span>
+       <span>hello</span>
+       <span>hello</span>
+       <span>hello</span>
+
+       <h1>pseudo selectors: 좀 더 세부적으로 엘리먼트를 선택해주는 것.</h1>
+       <p>
+
+        현재 알고 있는 세가지
+        1. tag 이름만 쓰기
+        2. 온점 다음 클래스 이름 쓰기
+        3. # 다음 id 이름 쓰기
+        
+        pseudo selector 사용하기 첫번째
+        : 먼저 여러개의 div를 만들고, 맨 밑에 있는 div만 배경색을 다르게 하고 싶으면 div: last-child {background-color: red} 이런 식으로 씀. last child는 리스트에 있는 div들 중 마지막에 있는 것을 의미. first-child도 있음.
+        
+        : 여러개의 span을 만들고, 원하는 span에만 배경색 집어넣는다고 했을 때도 사용가능. nth-child라고 쓰고 바로 뒤 괄호 안에 적용되길 원하는 span의 순서를 쓰는 것. nth-child(2), nth-child(4)...
+        
+        : 여러개 span의 배경색이 번갈아서 나타나길 원할 때는 nth-child로 숫자를 다 쓰는게 아니라 nth-child(even) 이라고 쓰면 짝수번 째의 span에만 적용. 반대인 odd(홀수)도 가능.
+        
+        : 2n이라고 쓰면 even이랑 똑같이 적용. 2n+1은 odd랑 똑같이 적용. n을 사용하는게 아주 유용함. 5n, n+5, 3n+1 등.</p>
+
+       <xmp>
+        div:first-child{
+            background-color: tomato;
+        }
+
+        div:last-child{
+            background-color: teal;
+        }
+        이렇게 하는게 class나 id를 만드는 것보다 훨씬 좋은 방법이다.
+       </xmp>
+
+       만약 짝수 번째 span에다가 색을 칠하거나 스타일을 입히고 싶이면
+       <xmp>
+        span:nth-child(even){
+            background-color: teal;
+
+        }
+       </xmp>
+       even을 사용한다. 만약 3번마다 바뀌는걸 원한다면
+       <xmp>
+        span:nth-child(3n+1){
+            background-color: teal;
+
+        }
+        </xmp>
+        
+        <p>
+            Combinators<span>hii</span>
+
+        </p>
+
+        <p>1. div 안에 span1과 p가 있고 p 안에 span2가 또 있을 때 p 안에 있는 span2에만 색상 주고 싶다면
+            먼저 부모 태그를 먼저 쓰고 자식 태그를 쓰고 컬러 속성 주면 됨. p span {color: tomato;} 이렇게</p>
+
+
+    </body>
+</html>
+

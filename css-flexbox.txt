@@ -1,0 +1,48 @@
+        2. justify-content : 주축에서 이동
+        3. align-items : 교차축에서 이동
+        
+        inline-box의 문제점을 보완하기 위해 만들어 낸 방법이 flex-box.
+        flex-box는 어느 곳에나 박스를 둘 수 있고 아주 유연하게 2d 레이아웃에서 아주 잘 작동.
+        사용방법은 엄청 쉽지만, 사용할 때 지켜야하는 세가지 규칙들이 정말 중요.
+
+        1.자식에게 명시하지 않고 부모에게 명시한다. (div의 부모를 display: flex로 만든다)
+        - body 안에 세개의 div가 있고, 이 div들을 움직이고 싶다면 자식인 div에는 아무 명시하지 않고, div의 부모인 body에 명시함. 이때 부모를 flex container로 만들어야 함. flex container에는 두개의 축이 있는데, 주축과 교차축임. body의 display값 flex로 주면 해당 엘리먼트인 body가 flex 컨테이너가 되고, 같은 열에 div들이 배열됨. block 속성 아직 가지고 있음. 마진, 패딩도 있음.
+
+        - 이렇게 하면 많은 요소들 추가할 수 있음. justify-content 속성으로 center, flex-end, flex-start(디폴트), space-evenly/around/between 등 모든 계산을 알아서 해줌. 모니터 크기 줄어들면 자동으로 요소들도 줄어듦. justify-content는 주축 위에서 움직임. align-items라고 불리는 다른 속성은 교차축에 적용.
+
+        - alighn-items에 center값 주고 새고하면 그대로임.왜냐면 body의 높이가 div 박스 높이랑 같아서 더이상 이동할 수 없는것. 그래서 body에 height 값을 줘야함. 100vh의 값을 줄건데 이때 vh는 viewport height를 말함. viewport는 screen이랑 같은 뜻. 100vh는 화면 높이의100%를 뜻함.
+        align-items는 justify-content만큼 많은 옵션이 없음. flex-end/start, stretch(고정된 height 값 있으면 적용안됨)
+
+        2. 주축(main axis)
+        - 수평이 디폴트.
+
+        3. 교차축(cross axis)
+        - 디폴트값은 수직
+        주축과 교차축은 디폴트로 수평, 수직. 값을 바꾸기 위해서는 flex-direction을 수정하면 된다.
+
+
+        flex-direction에는 두가지 옵션이 있음. column(세로)과 row(가로).
+        세개의 div가 일정한 간격으로 화면 정중앙에 일자로 배치돼있는 상황에서 flex-direction을 column으로 주면, 주축은 수직이 되고 교차축은 수평이 됨.
+        
+        div 안에 텍스트 추가하면 텍스트가 자식이 되고 div가 부모가 되니까 이제 div를 flex xontainer로 만들어서 텍스트 글자를 마음대로 배치할 수 있게 됨.
+        
+        스크린 사이즈 줄이면 정해놨던 div 사이즈가 마음대로 줄어들 때가 있음. 이때 flex-wrap이라는걸 사용. flex-wrap: nowrap은 세개의 div가 같은 열에 있기 위해 마음대로 너비가 줄어듦. wrap으로 값을 바꾸면, 스크린 크기 줄어들어도 정해진 너비와 높이 일정하게 유지되고 같은 열에 못오는 div는 다음 열로 이동됨.
+        
+        flex-direction의 디폴트는 row, column으로 바꿀 수 있고 column-reverse라는 것도 있음. 밑에서 시작해서 위로 올라가는 것. row-reverse도 가능. flex-wrap에도 wrap-reverse라는게 있음. 3-2-1 div 있을 때 화면 크기 줄어들면 3이 위로 올라가고 밑에 2, 1이 배치됨.
+        reverse 많이 사용하진 않음.
+
+(wrapping)
+flex-wrap: nowrap; (모든 요소를 같은 줄에 있게 만들어 줌)
+Flex box의 width값은 초기 상태로만 있지 않고 그 뒤의 다른 속성을 적용하기 위해 width값을 바꿀 수도 있다.
+Flex-wrap: wrap; (모든 요소들을 최대한 같은 줄에 있게 하고 그게 안되면 다음 줄로 넘김)
+
+flex-direction : reverse도 존재 축은 그대로지만 축의 진행 방향을 바꿈 123 -> 321 순으로 진행방향을 바꿈.
+flex-wrap : wrap- reverse 도 가능 ! (묶인 아이들의 우선 순의들이 바뀜)
+
+주축과 교차축을 바꾸려면 flex-direction 을 수정하면 된다.
+column(수직)과 row(수평) 를 잘 바꾸면 된다.
+숫자를 가진 div를 flex container 로 만들 수 있다.
+div 에서 display:flex; 를 지우지 않으면 작동되지 않는다.
+flexbox는 박스를 배열하는데 유용하다
+flex 에는 많은 property(동적인 속성) 이 있지만 적당히 알아도 된다.
+* attribute(정적인 속성) property(동적인 속성)

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta name="robots" content="ALL"> 
+        <!-- 모든 로봇의 방문을 허용한다 -->
+        <meta name="robots" content="googlebot"> 
+        <!-- 구글 로봇만 방문을 허용한다 -->
+        <meta name="robots" content="none">
+        <!-- 로봇 방문을 허용하지 않는다 -->
+
+    </head>
+    <body>
+        <main>
+            <p>모든 메타 테그는 head와 head 사이에 작성합니다. 웹사이트나 홈페이지를 만들고 나면 네이버나 구글, 다음과 같은 포털사이트에 검색이 되도록 꼭 해야되는 절차가 있습니다. 바로 robots.txt를 루트(root)폴더에 만들어 검색로봇이 잘 수집해가도록 해야 하는데요. 이미지만 있는 사이트에서는 로봇이 모두 가져가라고 전체 허용만 하면 끝이지만, 회원정보가 있는 사이트에서는 보안 때문에 모두 허용해서는 안됩니다. 한번 알아보도록 하죠.
+                출처: https://hunit.tistory.com/311 [HunIT Blog:티스토리]</p>
+
+            <p>( index OR noindex  //  follow OR nofollow ): index는 로봇이 본페이지 방문을 허용하는지,  follow는 로봇이 본페이지의 링크세테이션을 기준으로 방문을 허용하는지 기준입니다. 아래와 같이 사용하시면됩니다. 
+                출처: https://hunit.tistory.com/312 [HunIT Blog:티스토리]</p>
+                
+                <div>
+                    meta name="robots" content="index,follow" 
+                    meta name="robots" content="noindex,follow"
+                    
+                    meta name="robots" content="index,nofollow"
+                    meta name="robots" content="noindex,nofollow" 
+                </div>
+
+
+            <div>meta tags with OGP 설명</div>
+
+            <ul>
+                <li>포털 사이트에서검색되는 키워드 설정 <strong> meta name = keywords" content="지훈이, HUNIT, 지훈블로그"</strong></li>
+                <li>포털사이트에서 표시되는 단어 설정 <strong>meta name ="description" content="지훈이, HUNIT, 지훈블로그"</strong></li>
+                <li>사이트 제작자 명 <strong>meta name ="author" content="HUNIT"</strong></li>
+                <li>문의 메일 <strong>meta name ="reply-to" content="simering@nate.com"</strong></li>
+                <li>기록된 언어 <strong>meta name ="content-language" content="kr"</strong></li>
+                <li>인코딩 설정<strong>meta http-equiv="content-type" content="text/html; charset=kr"</strong></li>
+            </ul>
+            <xmp>
+                
+		
+                페이스북에서 사용하는 OpenGraph protocol 
+                다른 곳에서도 많이 사용한다.
+                OpenGraph protocol 설명 사이트(영문) : http://ogp.me/
+                메타태그 검증기(페이스북) : https://developers.facebook.com/tools/debug/sharing 
+                <meta property="og:title" content="페이지 타이틀">
+                <meta property="og:type" content="website"> 
+                <meta property="og:image" content="http://~~~~/image.png"> 절대경로를 적어야하며, 보통 존재할 경우 같이 이미지를 보여준다.
+                <meta property="og:url" content="http://~~~~/this.page"> 웹상 경로(URL). 불필요 get param을 제거하는 편을 추천
+                <meta property="og:description" content="설명">
+                <meta property="og:site_name" content="사이트 이름">
+                <meta property="og:locale" content="ko_KR"> 언어_지역
+                <meta property="og:locale" content="en_US"> 여러개 나올 수 있다.
+                이외 더 추가할 수 있다. http://ogp.me/ 를 참고하라
+                
+                og tag 추가
+                <meta property="article:published_time" content="2019-07-25T21:26:44+00:00">첫 게시일. ISO_8601 형식, 2019-07-25,2019-07-25T21:26:44+00:00, 2019-07-25T21:26:44Z
+                <meta property="article:modified_time" content="2019-07-25T21:26:44+00:00"> 수정일
+                ISO_8601 날짜 형식 : https://en.wikipedia.org/wiki/ISO_8601 
+                
+                
+                
+                트위터에서 사용하는 카드
+                https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html
+                
+                <meta name="twitter:site" content="@트위터아이디"> 웹 사이트의 @username
+                <meta name="twitter:title" content="페이지 타이틀"> 
+                <meta name="twitter:description" content="설명">
+                <meta name="twitter:url" content="http://~~~~/this.page"> 웹상 경로(URL). 불필요 get param을 제거하는 편을 추천
+                <meta name="twitter:card" content="summary_large_image"> 카드형식 :  “summary”, “summary_large_image”, “app”, or “player”
+                <meta name="twitter:image" content="http://~~~~/image.png"> 절대경로를 적어야하며, 보통 존재할 경우 같이 이미지를 보여준다.
+                <meta name="twitter:creator" content="@트위터아이디"> 컨텐츠 제작자의 @username
+                og tag와 같이 섞어 쓰이기도 한다.
+                
+                
+                
+                https://support.google.com/webmasters/answer/139066?hl=ko
+                <link rel="canonical" href="http://~~~~/this.page"> 표준 페이지 설정. 검색엔진에서 현재 페이지의 URL을 알려둔다. 같은 페이지이지만, 여러 URL이 있는 경우 설정하면, 표준 페이지의 URL로 검색엔진이 보여준다.
+                SEO를 신경쓴다면 꼭 설정하자.
+                
+                https://webmasters.googleblog.com/2011/09/pagination-with-relnext-and-relprev.html
+                구글의 검색엔진에서 해당 페이지에 대한 이전/다음 페이지에 대한 정보를 같이 보여주도록 유도한다.
+                <link rel="prev" href="http://~~~~/prev.page">
+                <link rel="next" href="http://~~~~/next.page">
+                
+                
+                https://json-ld.org/spec/latest/json-ld/
+                https://ko.wikipedia.org/wiki/JSON-LD
+                현재 페이지에 대한 정보를 JSON 형식으로 표현함
+                <script type="application/ld+json">
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Person",
+                    "name": "제작자",
+                    "url": "http://~~~~/this.page",
+                    "logo": "http://~~~~/image.png"
+                }
+                </script>		
+                
+                
+                이 밑은 해당 웹 서버스와의 연동에 대한 정보
+                <meta property="fb:app_id" content="{{ site.facebook.app_id }}"> 페이스북 앱 연결용 정보
+                
+                <meta name="google-site-verification" content="{{ site.google_site_verification }}" /> 사이트 소유권 확인 https://support.google.com/webmasters/answer/9008080
+                <meta name="msvalidate.01" content="{{ site.bing_site_verification }}"> Bing 웹마스터 도구 
+                <meta name="alexaVerifyID" content="{{ site.alexa_site_verification }}"> 알렉사 인증
+                <meta name="yandex-verification" content="{{ site.yandex_site_verification }}"> Yandex 웹마스터 도구
+                <meta name="naver-site-verification" content="{{ site.naver_site_verification }}"> 네이버 인증
+                <meta name="p:domain_verify" content="{{ site.naver_site_verification }}">  Pintrest 인증 
+                
+                
+            
+                </xmp>
+                <!-- xmp기능은 이 안에 작성한 값들이 작동하지 않게 한다. -->
+                <!-- xmp태그는 모든 html 태그들을 일반 문자로 인식해서 모든 문자와 모든 태그들을 
+                    일반 문자처럼 출력해주는 동시에 태그로서의 기능은 상실해 작동하지 않게 된다. -->
+
+                <div>opengraph 자체로는 구글 검색 엔진에 미치는 영향은 없지만 여러 SNS에 등록이 되어서 많은 사람들이 그 링크를 타고 오게 되면 2차적으로 구글 검색 순위에 도움이 된다고 할 수 있습니다.
+                    출처: https://nowonbun.tistory.com/517 [명월 일지:티스토리]</div>
+
+        </main>
+
+        <footer>
+
+        </footer>
+    </body>
+
+</html>

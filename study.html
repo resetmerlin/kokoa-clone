@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- mandatory when you write document or html -->
+<!-- we are trying to telling browser or explain what we are writing -->
+<html lang="kr">
+    <head>
+        <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="https://nomadcoders.co/m.svg">
+        <!-- putting logo image on html -->
+        <title>Frontend developer roadmap</title>
+        <meta charset="UTF-8"> 
+        <!-- this meta tag is very important  -->
+        <!-- 브라우저에게 text를 어떻게 그려달라는지 말해주는 역할을 함 -->
+        <meta name="description" content="Free HTMl tutorial for beginners">
+        <!-- description is important, that is what google looks for-->
+        <meta name="keywords" content="HTML, tutorial, beginners">
+        <meta name="author" content="Bro Code"> 
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+        <link href="study.css" rel="stylesheet" />
+
+        <style>
+           
+        </style>
+        <!-- css는 브라우저를 읽을때 위에서 아래로 읽는다. -->
+        <!-- 동일한게 있어도 마지막에 있는 것이 결정한다. -->
+    </head>
+    <body>
+        <header>
+            <!-- could be replace by div just a box -->
+            <h1>This is wesite teaches you how to become frontend developer</h1>
+        </header>
+        <main>
+            <audio controls autoplay loop>
+                <source src="amend.mp3" type="audio/mpeg"/>
+                <source src="amend.ogg" type="audio/ogg"/>
+                Your blower does not supoort the HTML5 audio tag.
+    
+             
+                <!-- controls가 없으면 작동이 안된다 -->
+                <!-- controls가 없으면 작동이 안됨 -->
+                <!-- <source src="Caravan.mp3" type="audio/mp3"> -->
+                <!-- this is how to put audio in html -->
+                <!-- <source src="Caravan.ogg" type="audio/ogg"> -->
+                <!-- I don't know the importance of org  -->
+            </audio>
+            <form>
+                
+                <a href="megastudy.html"></a><button>Learn the basics</button>
+
+                <!-- span은 short text 전용이다.  -->
+                <div>
+                <label for="website">Website</label>
+                <input id="website"required placeholder="Website"  type="url"/>
+                <input type="submit" value="Create Account"/>
+                </div>
+                <!-- website 작성 -->
+    
+                <div>            
+                    <label for="email">email</label>
+                    <input id="email"required placeholder="email"  type="email"/>
+                    <input type="submit" value="write email"/>
+                </div>
+    
+    
+                <!-- email 작성 -->
+    
+                <label for="profile">Profile photo</label>
+                <input id="profile" type="file" accept=".png,.pdf" />
+                <!-- label need to work with input -->
+                <p>
+                    I'm trying to use label which is extension of form
+    
+                <a href="https://developer.mozilla.org/ko/docs/Web/HTML/Element/label">오늘 공부한거 중에서 잘 모르는 거</a>
+                <!-- i can choose file -->
+                <!-- i don't know function of id -->
+                <div>
+                <label for="first-name">First name</label>
+                <input id="first-name" required placeholder="Name" type="text"/>
+                
+                </div>      
+                <p>The id global attribute defines an identifier (ID) which must be unique in the whole document. Its purpose is to identify the element when linking (using a fragment identifier), scripting, or styling (with CSS).
+                </p>
+                <p>A normal, boring paragraph. Try not to fall asleep.</p>
+                <div>
+    
+                <!-- div is the semantic 문서를 보기만 해도 그 의미를 짐작할 수있는거
+     -->
+                
+    
+                <label for="Last Name">Last Name </label>
+                <input id="Last Name" required placeholder="Last Name" type="text"/>
+                <!--<input placeholder="Last Name" disabled type="text"/>-->
+                </div>
+    
+                <input required placeholder="Username" type="text"/>
+                <input required placeholder="Password" minlength="10" type="password"/>
+                <!-- required를 추가해서 form을 검증할 수 있게 됨 -->
+                <!-- 최소 10글자가 되어야 함.== minlenth -->
+                <input type="submit" value="create account">
+                <!-- input type -->
+                <div>
+                <p>id는 body안에 어떤 태그에든 넣을 수 있는 attribute이다</p>
+                <p>id is so important, cuz <strong>is unique identifier(고유식별자)</strong> </p>
+                <p>element당 하나의 id만 가질 수 있는게 id의 규칙이다.</p>
+                <p>태그는 하나의 id만 가질 수 있다.</p>
+                </div>
+            </form>
+           <ol>
+            <!-- ol is orderded list, ul is unordered list -->
+            <li>맥주</li>
+            <li>맥주</li>
+            <a href="https://google.com"> Go to the google </a>
+            <img src="img/c1.jpg"/>
+            <!-- img/ is folder name -->
+            <!-- a href is Http reference or hyperlink reference 라고 함 -->
+            <!-- image는 <image></image>이러는게 없다. image is self closing tag==<image/> -->
+           </ol>
+           <p>2022-07-03, What I studied; meta, html , anchor, overview of css and html </p>
+            
+        </main>
+
+        <footer>
+            &copy;2022 M.J
+        </footer>
+   
+    </body>
+</html>
+

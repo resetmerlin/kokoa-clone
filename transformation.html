@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <title>trasnformation</title>
+
+        <style>
+            img{
+                border: 5px solid black;
+                border-radius: 50%;
+                transition: transform 2s ease-in-out;
+
+            }
+            img:hover{
+                transform: matrix(1,2,3,4,5,6);
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="logo.png"/>
+        <span>shshshshahahh</span>
+        <p>
+            ransformation: 말 그대로 한 요소를 변형시킬 수 있음.
+
+border-radius에 50%를 주면 원이 됨.
+
+transform: rotateY(30deg)는 해당 요소를 3d 상에서 y축으로 30도만큼 회전하라는 의미.
+(x, y, z 축 다 가능)
+
+rotate 말고도 종류 많고 한번에 여러 변형도 작성 가능.
+
+scale(2, 2)는 x와 y 축으로 2배씩 커짐.
+
+translateX(-60px)은 왼쪽으로 60px 움직이기. 등등 다른 종류도 많음.
+
+transformation은 3d 변형이기 때문에 다른 box element인 margin, padding 등에 영향을 끼치지 않는다. 따라서 다른 요소의 box를 변형시키지 않고 원하는 요소를 이동시키기 위해서 translate을 사용함. 만약 span에 요소 두개 만들고 한개 transformation 적용해도 span은 이미지가 변형된지 모름. transformation은 box 차원에서 일어나지 않기 때문.
+
+transformation은 transition과 함께 쓸 수도 있음.
+img과 hover일 때 z축으로 30도 회전하길 원한다면 img:hover {transform: rotateZ(30deg);} 이렇게 작성. 그리고 img {transition: transform 5s ease-in;} 이렇게 애니메이션 줄 수도 있음.
+
+transform mdn 쳐서 종류 구경하기!
+
+        </p>
+
+        <xmp>
+            img{
+                border: 5px solid black;
+                border-radius: 50%;
+                transform: translateX(100px);
+            }
+        </xmp>
+        <xmp>
+            transform: skew(45deg);
+
+        </xmp>
+
+
+    </body>
+
+
+
+   
+</html>
+

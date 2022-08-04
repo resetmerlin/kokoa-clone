@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <title>
+
+        </title>
+        <style>
+            a{
+                color: wheat;
+                background-color: tomato;
+                text-decoration: none;
+                padding: 3px 5px;
+                border-radius: 5px;
+                font-size: 55px;
+                transition: color 1s cubic-bezier(0.950, 0.050, 0.795, 0.035), border-radius 5s ease-in-out;
+            }
+            a:hover{
+                border-radius: 20px;
+                color:tomato;
+                background-color: wheat;
+            }
+
+
+        </style>
+
+    </head>
+
+    <body>
+        <a href="#">Go home</a>
+
+
+        <p>Transitions는 어떤 상태에서 다른 상태로의 변화를 애니메이션으로 만드는 방법.
+
+            원래 wheat 색상인 텍스트가 hover일때 tomato색상으로 변화하는 코드에서 hover 상태일 때 색상이 부드럽게 변하도록 하고 싶을 때 transition 사용.
+            
+            transition은 state가 없는 요소에 붙여야 함. 먼저 transition: 쓰고, 변화시키고 싶은 요소인 b-c를 씀. 그다음 얼마에 걸려서 그 변화가 일어날건지 씀. => transition: bacgkround-color 10s
+            폰트 색상도 바꾸고 싶으면 transition: b-c 10s, color 5s
+            
+            transition이 hover일 때 바뀌는 배경색과 폰트색을 인식하고 hover 상태가 되면 바꿔쥼.
+            
+            혹은 해당 코드 중 변화하는 모든 것에 transition을 주기 위해 all이라고 작성해도 됨.
+            
+            꼭, transition은 state가 없는 원래 요소에 작성해야 함.</p>
+
+
+            <div>
+                transition
+                어떤 상태(state)에서 다른 상태(state)로의 "변화"를 애니메이션으로 만드는 방법
+
+                transition은 상태가 없는 요소에 적어야한다.
+
+                transition: all (변화하는 모든것들을 선택)
+                바뀌기전 요소(전 상태)에 trainsition은 바꿀 결과(새 상태)를 적었을 때 적용된다.
+                ex) transition: background-color: wheat; 10s ease-in-out
+                a:hover {
+                background-color: tomato;
+                color: wheat;
+                }
+                로 이미 바꾼 결과를 적어주었기 때문에 적용됨.
+            </div>
+        
+        
+        <h2>
+            transition은 state에 따라 바뀌는 property를 갖고 있으면 사용되는 것이다.
+            
+            
+        </h2>
+        <xmp>
+            a{
+                color: wheat;
+                background-color: tomato;
+                text-decoration: none;
+                padding: 3px 5px;
+                border-radius: 5px;
+                font-size: 55px;
+                transition: all 1s cubic-bezier(0.950, 0.050, 0.795, 0.035);
+            }
+            a:hover{
+                border-radius: 20px;
+                color:tomato;
+               
+            color goes wheat from tomato  
+        </xmp>
+
+        <h3> transition2 요약</h3>
+        <p>ease-in function은 브라우저에게 애니메이션이 어떻게 변할지 말해주는 것.
+
+            1. linear: 무언가를 직선으로 움직이게 만들어줌. 같은 속도로 좌우 직선으로 움직임.
+            2.ease-in: 시작점에서 좀 더 빨라지면서 움직임.
+            3. ease-out: 끝에서 느려짐.
+            4. ease-in-out: 느렸다가 가속했다가 느려지면서 끝남.
+            
+            *사이트 https://matthewlein.com/tools/ceaser 에서 느낌 차이 확인 가능
+            
+            디폴트로 갖고 있는 것은 linear,ease-in,ease-out, ease-in-out, ease임.
+            Equivalent to cubic-bezier 옵션도 있는데, cubic-bezier은 내가 나만의 애니메이션을 만들 수 있기 때문에 아주 강력함.
+            
+            각각 다른 트랜지션 적용하려면 사이에 콤마 찍기
+            
+            hover일 때 유용, focus, focus-within 등 다 적용됨.</p>
+
+            더 나아가서 내 background-color만 transition적용되게 할려면
+            a{
+                color: wheat;
+                background-color: tomato;
+                text-decoration: none;
+                padding: 3px 5px;
+                border-radius: 5px;
+                font-size: 55px;
+                transition: background-color 1s cubic-bezier(0.950, 0.050, 0.795, 0.035);
+            }
+            all을 background-color로 바꾸면 됨. border-radius나 text-color는 아주 빠르게 변할거다.
+            <xmp>
+
+                transition: color 1s cubic-bezier(0.950, 0.050, 0.795, 0.035), border-radius 5s ease-in-out; 
+                만약 애니메이션 효과를 다 적용 하지 않고 각각 마다 적용하고 싶으면 ,해서 적용 하면 
+                
+
+                특히나 hover를 갖고 있을때 아주 유용하다. hover 대신에 active, focus 일때도 작동함. 
+            </xmp>
+        </body>
+        
+</html>

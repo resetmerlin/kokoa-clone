@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!-- mandatory when you write document or html -->
+<!-- we are trying to telling browser or explain what we are writing -->
+<html lang="kr">
+    <head>
+        <link rel="shortcut icon" sizes="16x16 32x32 64x64" href="https://nomadcoders.co/m.svg">
+        <!-- putting logo image on html -->
+        <title>My first webstie</title>
+
+        <style>
+            *{
+                border: 1px dashed black;
+
+
+            }
+            html{
+                background-color: tomato;
+            }
+            body{
+                margin: 20px;
+                padding: 20px;
+                background-color: thistle;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+    
+            #first
+            {
+                background-color: whitesmoke;
+                width:150px;
+                height: 100px;
+
+            }
+            #second{
+                background-color: aqua;
+                width:50px;
+                height: 50px;
+            }
+            #third{
+                background-color: rgb(152, 225, 167);
+                width:25px;
+                height: 25px;
+            }
+            .btn{
+                padding: 5px 10px;
+                border-radius: 10px;
+
+            }
+            .teal{
+                border-style:dotted;
+                background-color: teal;
+                padding:20px;
+                margin:30px;
+            }
+            .tomato
+            {
+                background-color: tomato;
+                color: white;
+                padding: 5px 10px;
+                border-radius: 10px;
+            }
+
+            div{
+                display:inline-block;
+                width: 50px;
+                height: 50px;
+                background-color: teal;
+            }
+
+            
+
+
+        </style>
+        <!-- this div is pointer -->
+        <!-- there divs which is below body will effects -->
+
+        <!-- one value of margin means all the same-->
+        <!-- two values is top, bottom -->
+        <!-- four value: top right bottom left like a clock  -->
+        <!-- margin의 값을 하나만 제시하면 모든면에 적용이 되고
+        두개를 제시하면 각 상하, 좌우 순으로 적용이 됨.
+         네개를 제시하면 시계방향으로 적용이됨. -->
+         <!-- collapsing margin(마진상쇄)
+            - 두 box의 border가 겹칠때 일어난다.
+            -수직으로만 발생한다.
+            ==> padding 속성을 사용하여 해결할 수 있다. -->
+ 
+
+        
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+
+        <div></div>
+
+        <div></div>
+
+        <!-- box1 -->
+
+        <span class="btn tomato">hello</span>
+        <span class="btn tomato">tomato</span>
+
+        <span class="btn tomato">hello</span>
+        
+        <span class="btn teal">hello</span>
+        <span class="btn teal">teal</span>
+
+        <span class="btn teal">hello</span>
+        <!-- span allows elements to be next to it -->
+        <a href="#">link</a>
+        <p>hii</p>
+        <!-- paragraph doesn't allow beside of it -->
+        <p>there are two kinds of behavior; </p>
+        <p> the one is doesn not allow next to it which is <strong>BLOCK</strong></p>
+        <p>and the another one does allo next to it is <strong>INLINE</strong></p>
+        <header>
+        </header>
+        <main>
+
+            <form>
+                <span>short text</span>
+
+ 
+     
+            </form>
+
+            2022-07-03, What I studied; meta, html , anchor, overview of css and html </p>
+            What is not a BLOCK is <strong>span, link(a href), images</strong> </p>
+            is it possible change inline to block?? + inline is not a box
+
+
+            <xmp>
+
+            div{
+                display: inline; 
+                height: 150px;
+                width:150px;
+                background-color: tomato;
+            }
+
+            div was block but i can change in to inline by using display.
+            if your element is inline it does not have height and width
+            so this is a reason there will be nothing on the screen if you but width and height + and u change it into inline
+            
+            span{
+                display: block; 
+
+                background-color:turquoise;
+            }
+            span was inline but i can change into blcok by using span
+
+
+            we tried to give red background and white box
+            browser automatically make space between side and box
+
+            html{
+                background-color: tomato;
+            }
+            div{
+                height: 150px;
+                width:150px;
+                background-color: rgb(255, 255, 255);
+            }
+            
+            </xmp>
+
+            margin one of the properties that boxes have
+            box have three properties <strong>margin,border,padding</strong>
+            
+            margin은 box의 border(경계)의 바깥에 있는 공간이다.
+
+            <xmp>
+                body{
+                    margin:0;
+                }
+
+                this will make the side space to be 0
+            </xmp>
+
+
+            padding도 공간인데 box의 경게로부터 안쪽에 있는 공간이다.
+            how to use id
+            <xmp>  
+                #first
+                {
+                    background-color: whitesmoke;
+                    width:150px;
+                    height: 100px;
+    
+                }
+            </xmp>
+
+            border의 다른 종류는 진짜 별로라 거의 한 종류의 border만 쓴다
+            *{}의미는 전체를 뜻한다.
+            <xmp>            
+                *{
+                border: 2px solid black;
+
+
+            }
+            html{</xmp>
+
+            inline 요소는 block요소와 달리 margin 상, 하 값을 가질 수 없다.
+            * padding은 자유롭게 적용 가능 
+
+            <xmp> 
+                
+                #f,
+                #t{
+                    background-color: tomato;
+                }
+            </xmp>
+
+            문제는 id를 쓸때 겹치는 문제가 있다. class를 사용하면 된다
+            <xmp>
+                .f,
+                {
+                    background-color: tomato;
+                }
+    
+            </xmp>
+            각 id에 같은 property를 적용하고자 한다면 쉼표를 사용해, 코드를 간결하게 할 수 있음.
+            .을 사용해 class를 선택할 수 있음. class는 한 content에 여러 class가 사용될 수 있음
+            이를 활용해 코드의 중복을 최소화할 수 있음.
+   
+            class는 id와 달리 여러 개의 box들이 공용 할 수 있는 속성이다.
+            class는 여러 요소들이 같이 쓸 수 있다
+            <xmp>
+                <span class="tomato">hello</span>
+                <span class="tomato">tomato</span>
+
+                <span class="tomato">hello</span>
+            </xmp>
+
+            코드는 반복이 되면 안 좋다 
+            예로 들어서
+            <xmp>
+                .teal{
+                    border-style:dotted;
+                    background-color: teal;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                }
+                .tomato
+                {
+                    background-color: tomato;
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 10px;
+                }
+            </xmp>
+            이것을 두번 작성 하지 않고
+            <xmp>
+                btn.{
+                    padding: 5px 10px;
+                    border-radius: 10px; 
+
+                }
+
+            </xmp>
+            클래스를 만들어서 간편화 할 수 있다.
+            <strong>예로 들어서 이렇게</strong>
+            <xmp>
+                <span class="btn tomato">hello</span>
+                <span class="btn tomato">tomato</span>
+        
+                <span class="btn tomato">hello</span>
+                
+                <span class="btn teal">hello</span>
+                <span class="btn teal">teal</span>
+        
+                <span class="btn teal">hello</span>
+            </xmp>
+
+
+            inline: 높이와 너비 요소를 갖을 수 없다.
+            inline block: 높이와 너비를 갖으면서 옆에 다른 요소가 올 수 있다.
+            예로 들어서 이렇다. 
+            하지만 inline-block은 suckss cuz it is old
+            왠지 몰라도 요소 사이에 빈 공간이 있음. 우리는 만들 지 않았지만 이럼
+            또 다른 단점은 정해진 형식이 없다는 것이다.
+            다 margin이 제 각각임 특히 박스가 다 있을때 정확히 정할 수 없다. 
+            예로 들어서 한 종이 안에 내가 길이를 정확히 모르는데 임의의 사각형을 끼워 넣는 거라고 생각하면 쉽다 하지만
+            사각형 사이 공간 일정해야 한다는 조건이 있으면 너무 맞추기 힘들다
+
+            심지어ㅓㅓㅓ 화면에 맞추었어도 노트북 혹은 디바이스 기종에 따라 화면 크기가 달라 다시 간격을 설정해야 함
+            그래서 단점임.
+             
+            다시 말해서 결론은 inline-block은 반응형 디자인을 지원하지 않음 ==> 창 크기가 달라지면 그 때마다 변경해줘야 함)
+            <xmp>            
+                div{
+                display:inline-block;
+                width: 50px;
+                height: 50px;
+            </xmp>
+
+            그냥 알기만 하라는거다. 
+            <xmp>display: block; 옆에 box안오게 함 inline은 반대 개념이다.</xmp>
+
+        </main>
+
+        <footer>
+        </footer>
+   
+    </body>
+</html>
+

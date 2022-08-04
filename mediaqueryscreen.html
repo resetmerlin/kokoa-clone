@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>  
+        
+
+        <style>
+
+            body{
+                display: flex;
+                height: 200vh;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }            
+            div{
+                background-color: teal;
+                width: 200px;
+                height: 200px;
+
+            }
+
+
+
+
+
+
+            @media screen and (min-width:601px) and (max-width: 1200px) and (orientation: landscape){
+
+
+                div{
+                    background-color: wheat;
+                }
+
+            }
+
+            span{
+                font-size: 36px;
+            }
+            @media screen and (orientation: landscape){
+
+                span{
+                    display: none;
+                }
+            }
+
+
+            @media print{
+                body{
+                    background-color: tomato;
+                }
+            }
+  
+  
+            
+        </style>
+    </head>
+    <body>
+
+        <div>
+
+        </div>
+
+        <span>please flip your phone</span>
+
+                        <xmp>
+                            @media screen and (orientation: landscape){
+
+                                span{
+                                    display: none;
+                                }
+                            }
+
+                            가로로 돌리면 span에 쓴 글자들은 다 사라집니다아아아아
+                        </xmp>
+                        <p>
+                            
+                   @media screen and (min-width:601px) and (max-width: 1200px) and (orientation: landscape){} 를 추가해서 특히 
+                    orientation landscape(가로모드) 설정하면 가로, 세로 화면 설정에 따라 각각 다른 속성 부여 가능하다.
+                    portrait(세로)도 가능합니다.ㅇㅇㅇㅇ--
+
+
+
+
+                    <h3>media query 요약 </h3> 
+
+                     media query는 오직 css만을 이용해서 웹사이트를 보고 있는 사용자의 스크린 사이즈를 알 수 있는 방법이다. 누구는 아이폰, 누구는 큰 화면, 누구는 portrait 모드(세로), 누구는 landscape 모드(가로) 등 다 다르게 웹사이트를 볼텐데 오직 css만으로 이 모든 것을 감지할 수 있음. 그리고 우리의 css style을 바꿀 수 있음.
+                            => media query로 스크린 사이즈가 이 정도면 이 css style을 사용자에게 보여줘라고 지정
+
+                            @media screen and (max-width: 400px) {
+                            div {background-color: tomato;}
+                            }
+                            => 스크린 사이즈의 최대 너비가 400px보다 작으면, 배경색을 tomato로 보이게 해라
+
+                            @media screen and (max-width: 600px) and (min-width: 400px) and (orientation: landscape) 이렇게 여러개 조합 가능. orientation: landscape는 가로모드를 의미. 반대는 portrait.
+
+                            span에 plase flip your phone을 쓰고, 가로모드일 때 텍스트가 사라지게 만드려면 span에
+                            @media screen and (orientation: landscape) {
+                            span {display: none;}
+                            } 이렇게 작성. 
+
+                        </p>
+
+
+
+
+                        <h4> recap</h4>
+                        <p>media query
+                            - 안에 원하는 css를 모두 추가할 수 있음
+                            - and를 써서 연결됨
+                            <xmp>
+                                
+            @media screen and (min-width:601px) and (max-width: 1200px) and (orientation: landscape){
+
+
+                div{
+                    background-color: wheat;
+                }
+
+            }
+            그리고 div쓴거 처럼 안에 css 작성해야 함ㅇㅇ
+                            </xmp>
+                            - min/max-device-width 라는 것도 있는데, 오직 휴대폰에 적용되므로 데스크톱 브라우저는 이해 못함
+                            - aspect-ratio옵션으로는 스크린이 레티나 디스플레인지 아닌지도 구분할 수 있음, 레티나 디스플레이라면 더 나은 퀄리티의 배경화면을 가질 수 있어엉
+                            - 쓸 수 있는 옵션 엄청 많음
+                            <stong>- 다른 종류의 media type으로 screen 말고 print가 있음. 웹페이지를 print할 때 css 지정하는 것.
+                            @media print { body {b-c: tomato;} }</stong></p>
+   
+                                <xmp>
+                                    @media print{
+                                        body{
+                                            background-color: tomato;
+                                        }
+                                    }
+                                프린트 할려고 하면 tomato 색을 가진 배경화면이 나온다잉ㅇ
+                                
+                                </xmp>
+   
+                        </body>
+
+</html>
+
+

@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <title>animation</title>
+
+        <style>
+
+            @keyframes superSexyCoinFlip{
+                from{
+                    transform:rotateY(0);
+                }
+
+                to{
+                    transform: rotateY(360deg) translateX(100px);
+                }
+
+            }
+            img{
+                border: 5px solid black;
+                border-radius: 50%;
+                animation: superSexyCoinFlip 5s ease-in-out infinite;
+
+            }
+
+
+  
+        </style>
+    </head>
+
+    <body>
+        <img src="logo.png"/>
+        <p>
+
+            <xmp>
+                @keyframes superSexyCoinFlip{
+                    from{
+                        transform:rotateY(0);
+                    }
+    
+                    to{
+                        transform: rotateY(360deg) translateX(100px);
+                    }
+
+                    
+    
+                }
+
+                rotateY로 360도 회전하기, translateX는 애니메이션이 시작할때 100px 만큼 움직이면서 작동함.하지만 시작할때는 다시 원위치에서 시작함.
+                img{
+                    border: 5px solid black;
+                    border-radius: 50%;
+                    animation: superSexyCoinFlip 5s ease-in-out infinite;
+    
+                }
+
+            </xmp>
+        </p>
+
+        <span>
+            1.@keyframes는 애니메이션의 시작부터 종료 부분까지 어떠한 동작을 할 것인지 지정할 수 있는 CSS 문법
+2. @keyframes 애니메이션이름{ from{효과} to{효과} }
+3. 작동시키기
+property{
+blah
+blah
+animation: 애니메이션이름 재생시간 속도설정 infinite
+}
+마지막에 infinite를 붙이면 손대지 않아도 계속 작동한다
+        </span>
+
+
+    </body>
+
+
+
+   
+</html>
+
+
+</body>

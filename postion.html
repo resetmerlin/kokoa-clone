@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<!-- mandatory when you write document or html -->
+<!-- we are trying to telling browser or explain what we are writing -->
+<html lang="kr">
+    <head>
+        <title>My first webstie</title>
+
+        <style>
+  
+            body{
+                height: 1000vh;
+                margin: 20px;
+            }
+
+            div{
+                width: 300px;
+                height: 300px;
+                background-color: teal;
+                }
+
+                #different{
+                    background-color: wheat;
+                }
+                #green{
+                    background-color: teal;
+                    position: fixed;
+                   
+                    position: fixed;
+                    opacity: 0.2;
+                }
+        </style>
+    </head>
+
+    <body>
+        <div id="green">1</div>
+        <div id="different"></div>
+
+
+        <p>내가 스크롤 게속 해도 화면에 보이는 teal색깔 박스는 계속있음.</p>
+        <p>흥미로운 거는 이 div가 고정된 위치는 초기에 위치한 자리이다. 그런데 초기위치도 바꿀 수 있다/
+            어떻게??? </p>
+        <xmp>                   
+                 <style>
+                    #different{
+                    top: 5px;
+                    position: fixed;
+                    background-color: wheat;
+                    width: 350px;
+                }</style>
+
+                top: px; 사용하면 된다.
+        </xmp>
+        또한 top,left,right,bottom 프로퍼티 중에서 하나만 수정해도 자기 위에 박스를 넘어서게 되면 이 div는 다른 div를 넘어서게 된다.
+        fixed를 사용하면 레이어를 부수고 다른 레이어에 위치한다. 가장 위에 있음
+    </body>
+</html>
+
